@@ -1,0 +1,11 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Allow public read access to articles
+    match /articles/{articleId} {
+      allow read: if true;
+      // Only allow write if the user is authenticated and has the specific UID
+      allow write: if request.auth != null && (request.auth.uid == "KvgaucrF9GdnXMbX4MtijnYrFYp2" || request.auth.uid == "DWs7CpYdY4gaVwPwLPHdeBAnHDE3");
+    }
+  }
+}

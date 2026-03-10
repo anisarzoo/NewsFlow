@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NewsFlow - Latest Stories</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>News<span>Flow</span></h1>
+            <nav>
+                <!-- Navigation links removed -->
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="latest-news">
+            <h2>Latest News</h2>
+
+            <div class="search-container">
+                <input type="text" id="search-input" class="search-input" placeholder="Search news...">
+            </div>
+
+            <!-- Category Filter Chips -->
+            <div class="category-filters" id="category-filters"
+                style="display: flex; gap: 12px; overflow-x: auto; padding-bottom: 8px; margin-bottom: 2.5rem;">
+                <button class="filter-chip active" data-category="all">All</button>
+                <button class="filter-chip" data-category="World">World</button>
+                <button class="filter-chip" data-category="Politics">Politics</button>
+                <button class="filter-chip" data-category="Business">Business</button>
+                <button class="filter-chip" data-category="Tech">Tech</button>
+                <button class="filter-chip" data-category="Science">Science</button>
+                <button class="filter-chip" data-category="Health">Health</button>
+                <button class="filter-chip" data-category="Sports">Sports</button>
+                <button class="filter-chip" data-category="Entertainment">Entertainment</button>
+            </div>
+
+            <div id="articles-grid" class="articles-grid">
+                <!-- Articles will be loaded here dynamically -->
+                <p class="loading">Loading articles...</p>
+            </div>
+
+            <div class="load-more-container">
+                <button id="load-more-btn" class="load-more-btn hidden">Load More Stories</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 NewsFlow. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Firebase SDKs -->
+    <script type="module" src="js/app.js"></script>
+</body>
+
+</html>
